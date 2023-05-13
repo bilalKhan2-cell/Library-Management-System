@@ -1,0 +1,26 @@
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\Library Management System.exe.config
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\Library Management System.exe
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\Library Management System.pdb
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library Management System.csprojResolveAssemblyReference.cache
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Form1.resources
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Properties.Resources.resources
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library Management System.csproj.GenerateResource.Cache
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library Management System.exe
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library Management System.pdb
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\ComponentFactory.Krypton.Toolkit.dll
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\ComponentFactory.Krypton.Toolkit.pdb
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\MySql.Data.dll
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\ZstdNet.dll
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\Ubiety.Dns.Core.dll
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\bin\Debug\MySql.Data.xml
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Department.resources
+c:\users\muhammad bilal khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Students.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Books.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Dashboard.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.ListDepartments.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.ListBooks.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.ListUsers.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.IssueBook.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.ReturnBook.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.ListStudents.resources
+C:\Users\Muhammad Bilal Khan\documents\visual studio 2015\Projects\Library Management System\Library Management System\obj\Debug\Library_Management_System.Login.resources
