@@ -29,6 +29,8 @@ namespace Library_Management_System
             kryptonDataGridView1.Visible = false;
 
             con.ConnectionString = app.constr;
+
+            kryptonWrapLabel15.Visible = kryptonWrapLabel17.Visible = false;
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -101,7 +103,7 @@ namespace Library_Management_System
         {
             con.Open();
 
-            com.CommandText = "select id from students where id='"+rollno.ToUpper().ToString()+"';";
+            com.CommandText = "select * from students where id='"+rollno.ToUpper().ToString()+"';";
             com.Connection = con;
 
             MySqlDataReader read = com.ExecuteReader();
