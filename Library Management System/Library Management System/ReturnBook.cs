@@ -101,7 +101,7 @@ namespace Library_Management_System
         {
             con.Open();
 
-            com.CommandText = "select * from students where rollno='"+rollno.ToUpper().ToString()+"';";
+            com.CommandText = "select id from students where id='"+rollno.ToUpper().ToString()+"';";
             com.Connection = con;
 
             MySqlDataReader read = com.ExecuteReader();
@@ -123,9 +123,15 @@ namespace Library_Management_System
                 lblIssuingDate.Text = IssuanceReader.GetString(3);
                 lblTillDate.Text = IssuanceReader.GetString(2);
 
-                TimeSpan duration = DateTime.Parse(lblIssuingDate.Text) - DateTime.Parse(lblTillDate.Text);
+                TimeSpan duration = DateTime.Parse(lblTillDate.Text) - DateTime.Parse(lblIssuingDate.Text);
                 lblTotalDays.Text = duration.Days.ToString();
 
+                con.Close();
+            }
+
+            else
+            {
+                MessageBox.Show("null");
                 con.Close();
             }
         }
