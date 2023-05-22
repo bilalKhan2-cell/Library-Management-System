@@ -105,25 +105,29 @@ namespace Library_Management_System
             com.Connection = con;
 
             MySqlDataReader read = com.ExecuteReader();
-            read.Read();
-            int student_id = read.GetInt32(0);
+            if(read.Read())
+            {
+                int student_id = read.GetInt32(0);
 
-            con.Close();
+                con.Close();
 
-            con.Open();
+                con.Open();
 
-            com.CommandText = "select * from issuance where student_id="+ Convert.ToInt32(student_id)+" and book_id="+Convert.ToInt32(book_id)+" and return_date is null;";
-            com.Connection = con;
+                com.CommandText = "select * from issuance where student_id=" + Convert.ToInt32(student_id) + " and book_id=" + Convert.ToInt32(book_id) + " and return_date is null;";
+                com.Connection = con;
 
-            MySqlDataReader IssuanceReader = com.ExecuteReader();
+                MySqlDataReader IssuanceReader = com.ExecuteReader();
 
-            lblIssuingDate.Text = IssuanceReader.GetString(3);
-            lblTillDate.Text = IssuanceReader.GetString(2);
+                IssuanceReader.Read();
 
-            TimeSpan duration = DateTime.Parse(lblIssuingDate.Text) - DateTime.Parse(lblTillDate.Text);
-            lblTotalDays.Text = duration.Days.ToString();
+                lblIssuingDate.Text = IssuanceReader.GetString(3);
+                lblTillDate.Text = IssuanceReader.GetString(2);
 
-            con.Close();
+                TimeSpan duration = DateTime.Parse(lblIssuingDate.Text) - DateTime.Parse(lblTillDate.Text);
+                lblTotalDays.Text = duration.Days.ToString();
+
+                con.Close();
+            }
         }
 
         private void FetchStudent(string id)
