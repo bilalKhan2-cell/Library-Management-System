@@ -112,7 +112,7 @@ namespace Library_Management_System
 
             con.Open();
 
-            com.CommandText = "select * from issuance where stduent_id="+ Convert.ToInt32(student_id)+" and book_id="+Convert.ToInt32(book_id)+" and return_date is null;";
+            com.CommandText = "select * from issuance where student_id="+ Convert.ToInt32(student_id)+" and book_id="+Convert.ToInt32(book_id)+" and return_date is null;";
             com.Connection = con;
 
             MySqlDataReader IssuanceReader = com.ExecuteReader();

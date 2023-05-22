@@ -107,25 +107,25 @@ namespace Library_Management_System
                 con.Open();
 
                 string table = "issuance";
-                string[] cols = {"student_id","book_id","_from","_until"};
-                object[] values = {lblStudentID.Text,(int)kryptonComboBox1.SelectedValue,kryptonDateTimePicker1.Value.ToString("yyyy-MM-dd"),kryptonDateTimePicker2.Value.ToString("yyyy-MM-dd")};
+                string[] cols = { "student_id", "book_id", "_from", "_until" };
+                object[] values = { lblStudentID.Text, (int)kryptonComboBox1.SelectedValue, kryptonDateTimePicker1.Value.ToString("yyyy-MM-dd"), kryptonDateTimePicker2.Value.ToString("yyyy-MM-dd") };
 
-                com.CommandText = "select count(student_id) from issuance where student_id='"+Convert.ToInt32(lblStudentID.Text)+"' and return_date is null;";
+                com.CommandText = "select count(student_id) from issuance where student_id='" + Convert.ToInt32(lblStudentID.Text) + "' and return_date is null;";
                 com.Connection = con;
 
-                if(com.ExecuteScalar().ToString()=="3")
+                if (com.ExecuteScalar().ToString() == "3")
                 {
-                    MessageBox.Show("Maximum Numbers of Book Issued To The Student..","Library Management System..",MessageBoxButtons.OK,MessageBoxIcon.Stop);
+                    MessageBox.Show("Maximum Numbers of Book Issued To The Student..", "Library Management System..", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
 
                 else
                 {
-                    com.CommandText = app.InsertQuery(table,cols,values);
+                    com.CommandText = app.InsertQuery(table, cols, values);
                     com.Connection = con;
 
                     com.ExecuteNonQuery();
 
-                    MessageBox.Show("Book Issued Successfully..","Library Management System..",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Book Issued Successfully..", "Library Management System..", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     panel1.Hide();
                     panel3.Hide();
@@ -134,9 +134,9 @@ namespace Library_Management_System
                 con.Close();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"Library Management System",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Library Management System", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 con.Close();
             }
         }
