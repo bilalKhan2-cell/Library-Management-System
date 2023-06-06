@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Library_Management_System
 {
@@ -49,6 +50,30 @@ namespace Library_Management_System
 
             button6.FlatStyle = FlatStyle.Flat;
             button6.FlatAppearance.BorderSize = 0;
+
+            con.ConnectionString = app.constr;
+
+            con.Open();
+            label2.Text = "Total Registered Students: "+FetchTotalStudents().ToString();
+            label3.Text = "Total Registered Books: " +FetchTotalBooks().ToString();
+            con.Close();
+        }
+
+        private int FetchTotalStudents()
+        {
+
+            com.Connection = con;
+            com.CommandText = "select count(id) from students;";
+
+            return Convert.ToInt32(com.ExecuteScalar().ToString());
+        }
+
+        private int FetchTotalBooks()
+        {
+            com.Connection = con;
+            com.CommandText = "select count(id) from books";
+
+            return Convert.ToInt32(com.ExecuteScalar().ToString());
         }
 
         private void button1_Click(object sender, EventArgs e)
