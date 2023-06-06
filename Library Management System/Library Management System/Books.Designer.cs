@@ -38,6 +38,7 @@
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonWrapLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // kryptonWrapLabel1
@@ -99,10 +100,10 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(323, 244);
+            this.kryptonButton1.Location = new System.Drawing.Point(291, 244);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
-            this.kryptonButton1.Size = new System.Drawing.Size(132, 35);
+            this.kryptonButton1.Size = new System.Drawing.Size(124, 35);
             this.kryptonButton1.TabIndex = 11;
             this.kryptonButton1.Values.Text = "Save Data";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -123,12 +124,23 @@
             this.kryptonWrapLabel5.Name = "kryptonWrapLabel5";
             this.kryptonWrapLabel5.Size = new System.Drawing.Size(0, 15);
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(421, 244);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.kryptonButton2.Size = new System.Drawing.Size(115, 35);
+            this.kryptonButton2.TabIndex = 17;
+            this.kryptonButton2.Values.Text = "Delete";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(767, 386);
+            this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.kryptonWrapLabel5);
             this.Controls.Add(this.kryptonDateTimePicker1);
             this.Controls.Add(this.kryptonButton1);
@@ -160,5 +172,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton1;
         private ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker kryptonDateTimePicker1;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel5;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

@@ -14,6 +14,7 @@ namespace Library_Management_System
             if(id!=null)
             {
                 FetchBookById(id);
+                kryptonButton2.Visible = true;
             }
         }
 
@@ -55,6 +56,12 @@ namespace Library_Management_System
             kryptonWrapLabel5.Hide();
 
             con.ConnectionString = app.constr;
+
+            if (kryptonWrapLabel5.Text == "" || kryptonWrapLabel5.Text == string.Empty) {
+
+            kryptonButton2.Visible = false;
+            }
+
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -96,6 +103,22 @@ namespace Library_Management_System
 
                 con.Close();
             }
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            com.Connection = con;
+            com.CommandText = app.DeleteQuery("books","id="+Convert.ToInt32(kryptonWrapLabel5.Text));
+            com.ExecuteNonQuery();
+
+            MessageBox.Show("Book Deleted Successfully..","Library Management System..",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+            kryptonButton2.Visible = false;
+            kryptonWrapLabel5.Text = "";
+
+            con.Close();
         }
     }
 }

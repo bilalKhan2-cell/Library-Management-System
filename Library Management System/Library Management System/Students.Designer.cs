@@ -50,6 +50,7 @@
             this.kryptonWrapLabel10 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.txtContactInfo = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonWrapLabel11 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.cmbGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbBatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDepartment)).BeginInit();
@@ -200,10 +201,10 @@
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(345, 288);
+            this.kryptonButton1.Location = new System.Drawing.Point(180, 292);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparklePurple;
-            this.kryptonButton1.Size = new System.Drawing.Size(161, 39);
+            this.kryptonButton1.Size = new System.Drawing.Size(137, 30);
             this.kryptonButton1.TabIndex = 23;
             this.kryptonButton1.Values.Text = "Submit Data";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
@@ -250,11 +251,22 @@
             this.kryptonWrapLabel11.Size = new System.Drawing.Size(76, 15);
             this.kryptonWrapLabel11.Text = "Contact Info:";
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(323, 292);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.kryptonButton2.Size = new System.Drawing.Size(137, 30);
+            this.kryptonButton2.TabIndex = 50;
+            this.kryptonButton2.Values.Text = "Delete";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(791, 500);
+            this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.txtContactInfo);
             this.Controls.Add(this.kryptonWrapLabel11);
             this.Controls.Add(this.kryptonWrapLabel10);
@@ -319,5 +331,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel10;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtContactInfo;
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel11;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }

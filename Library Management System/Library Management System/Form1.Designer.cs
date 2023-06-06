@@ -40,11 +40,12 @@
             this.kryptonWrapLabel5 = new ComponentFactory.Krypton.Toolkit.KryptonWrapLabel();
             this.txtConfirmPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.SuspendLayout();
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(322, 271);
+            this.kryptonButton1.Location = new System.Drawing.Point(282, 270);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.SparkleBlue;
             this.kryptonButton1.Size = new System.Drawing.Size(117, 28);
@@ -155,11 +156,22 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "label1";
             // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(405, 270);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Blue;
+            this.kryptonButton2.Size = new System.Drawing.Size(117, 28);
+            this.kryptonButton2.TabIndex = 24;
+            this.kryptonButton2.Values.Text = "Delete User";
+            this.kryptonButton2.Click += new System.EventHandler(this.kryptonButton2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(906, 453);
+            this.Controls.Add(this.kryptonButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.kryptonWrapLabel5);
             this.Controls.Add(this.txtConfirmPassword);
@@ -195,6 +207,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonWrapLabel kryptonWrapLabel5;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtConfirmPassword;
         private System.Windows.Forms.Label label1;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton kryptonButton2;
     }
 }
 

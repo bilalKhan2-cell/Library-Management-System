@@ -43,6 +43,7 @@ namespace Library_Management_System
             reader.Read();
 
             con.Close();
+                kryptonButton2.Visible = true;
         }
 
         private void Students_Load(object sender, EventArgs e)
@@ -58,6 +59,11 @@ namespace Library_Management_System
             SetBatch();
 
             txtName.Text = txtFatherName.Text = txtContactInfo.Text = txtAge.Text = txtEmailAddress.Text = txtRollNo.Text = txtAddress.Text = string.Empty;
+
+            if(kryptonWrapLabel10.Text=="" || kryptonWrapLabel10.Text == string.Empty)
+            {
+                 kryptonButton2.Visible = false;
+            }
         }
 
         private void FetchDepartment()
@@ -121,6 +127,21 @@ namespace Library_Management_System
         private void cmbDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            com.Connection = con;
+            com.CommandText = app.DeleteQuery("students","id="+Convert.ToInt32(kryptonWrapLabel10.Text));
+            com.ExecuteNonQuery();
+
+            MessageBox.Show("Student Record Deleted Successfully..","Library Management System..",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            kryptonWrapLabel10.Text = "";
+            kryptonButton2.Visible = false;
+
+            con.Close();
         }
     }
 }

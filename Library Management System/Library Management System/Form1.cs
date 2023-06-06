@@ -50,6 +50,7 @@ namespace Library_Management_System
             txtPassword.ReadOnly = txtConfirmPassword.ReadOnly = true;
 
             con.Close();
+                kryptonButton2.Visible = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -64,6 +65,11 @@ namespace Library_Management_System
             con.ConnectionString = app.constr;
 
             label1.Hide();
+
+            if (label1.Text == "" || label1.Text == string.Empty)
+            {
+                 kryptonButton2.Visible = false;
+            }
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -109,6 +115,21 @@ namespace Library_Management_System
                     con.Close();
                 }
             }
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            com.Connection = con;
+            com.CommandText = app.DeleteQuery("users","id="+Convert.ToInt32(label1.Text));
+            com.ExecuteNonQuery();
+
+            MessageBox.Show("User Deleted Successfully..","Library Management System..",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            kryptonButton2.Visible = false;
+            label1.Text = "";
+
+            con.Close();
         }
     }
 }

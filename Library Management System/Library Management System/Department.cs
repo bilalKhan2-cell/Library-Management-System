@@ -38,6 +38,7 @@ namespace Library_Management_System
             label3.Text = id;
 
             con.Close();
+                kryptonButton2.Visible = true;
         }
 
         private void Department_Load(object sender, EventArgs e)
@@ -52,6 +53,11 @@ namespace Library_Management_System
             this.BackColor = Color.White;
 
             con.ConnectionString = app.constr;
+
+            if(label3.Text=="" || label3.Text==string.Empty)
+            {
+                kryptonButton2.Visible = false;
+            }
         }
 
         private void kryptonButton1_Click(object sender, EventArgs e)
@@ -122,6 +128,21 @@ namespace Library_Management_System
                 MessageBox.Show(ex.Message, "Library Management System..", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 con.Close();
             }
+        }
+
+        private void kryptonButton2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+
+            com.Connection = con;
+            com.CommandText = app.DeleteQuery("departments","id="+Convert.ToInt32(label3.Text));
+            com.ExecuteNonQuery();
+
+            MessageBox.Show("Department Deleted Successfully..","Library Management System..",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            kryptonButton2.Visible = false;
+            label3.Text = "";
+
+            con.Close();
         }
     }
 }
